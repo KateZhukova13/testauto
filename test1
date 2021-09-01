@@ -1,0 +1,55 @@
+web.init();
+web.open('https://sample-project.tech-stack.dev/');
+
+web.selectWindow('title=Home - Hackathon Starter');
+//       xpath:link: //a[contains(text(),\'Create Account\')]
+//       xpath:href: //a[contains(@href, \'/signup\')]
+//   xpath:position: //ul[2]/li[2]/a
+//             link: link=CREATE ACCOUNT
+//              css: css=body > div.navbar.navbar-light.fixed-top.navbar-expand-lg.bg-light > div > div > ul.nav.navbar-nav.ml-auto > li:nth-child(2) > a
+web.click('//a[contains(text(),\'Create Account\')]');
+
+web.selectWindow('title=Create Account - Hackathon Starter');
+//               id: id=email
+//             name: name=email
+// xpath:attributes: //input[@id=\'email\']
+// xpath:idRelative: //form[@id=\'signup-form\']/div[1]/div/input
+//   xpath:position: //div[1]/div/input
+//              css: css=#email
+web.type('id=email', 'testra@mail.ru');
+//               id: id=password
+//             name: name=password
+// xpath:attributes: //input[@id=\'password\']
+// xpath:idRelative: //form[@id=\'signup-form\']/div[2]/div/input
+//   xpath:position: //div[2]/div/input
+//              css: css=#password
+web.click('id=password');
+
+//               id: id=password
+//             name: name=password
+// xpath:attributes: //input[@id=\'password\']
+// xpath:idRelative: //form[@id=\'signup-form\']/div[2]/div/input
+//   xpath:position: //div[2]/div/input
+//              css: css=#password
+web.type('id=password', '12345678');
+//               id: id=confirmPassword
+//             name: name=confirmPassword
+// xpath:attributes: //input[@id=\'confirmPassword\']
+// xpath:idRelative: //form[@id=\'signup-form\']/div[3]/div/input
+//   xpath:position: //div[3]/div/input
+//              css: css=#confirmPassword
+web.click('id=confirmPassword');
+
+//               id: id=confirmPassword
+//             name: name=confirmPassword
+// xpath:attributes: //input[@id=\'confirmPassword\']
+// xpath:idRelative: //form[@id=\'signup-form\']/div[3]/div/input
+//   xpath:position: //div[3]/div/input
+//              css: css=#confirmPassword
+web.type('id=confirmPassword', '12345678');
+// xpath:attributes: //button[@type=\'submit\']
+// xpath:idRelative: //form[@id=\'signup-form\']/div[4]/button
+//   xpath:position: //div[4]/button
+//              css: css=#signup-form > div.form-group.offset-sm-3.col-md-7.pl-2 > button
+web.click('//button[@type=\'submit\']');
+
